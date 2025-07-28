@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rounded Square Video Above Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 10px;
+      }
+
+      #container {
+        display: flex;
+        justify-content: center;
+      }
+      #container video {
+        border-radius: 50px;
+        overflow: hidden; /* clip child corners */
+      }
+      canvas {
+        position: absolute;
+      }
+
+      /* Rounded square video container */
+      #video-container {
+        width: 350px;
+        height: 350px; /* make it square */
+        border-radius: 25px; /* rounded corners */
+        overflow: hidden; /* clip the video inside rounded corners */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        margin-bottom: 30px;
+        background-color: #000; /* fallback background */
+        position: relative;
+      }
+
+      #video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* cover entire container, crop if needed */
+        display: block;
+      }
+
+      /* Login form */
+      #login-form {
+        width: 350px;
+        background: white;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+
+      #login-form label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      #login-form input {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 18px;
+        border: 1.5px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+      }
+
+      #login-form input:focus {
+        border-color: #6366f1;
+        outline: none;
+      }
+
+      #login-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #6366f1;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #login-form button:hover {
+        background-color: #1e40af;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Canvas draws to outline -->
+    <canvas id="canvas"></canvas>
+    <div id="video-container container">
+      <video id="video-feed" height="233.33" width="300" autoplay></video>
+    </div>
+
+    <form id="login-form">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter username"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        required
+      />
+
+      <button type="submit">Login</button>
+    </form>
+
+    <script src="./face-api.min.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
