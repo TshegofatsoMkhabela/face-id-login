@@ -19,7 +19,7 @@ const run = async () => {
     {
       label: "Tshego",
       imageUrl:
-        "http://127.0.0.1:5500/testing-face-id/face-api-webcam-final/public/images/blue-profile.jpg",
+        "http://127.0.0.1:5500/face-id-login/face-api-webcam-final/public/images/blue-profile.jpg",
     },
     {
       label: "Jordan",
@@ -29,7 +29,7 @@ const run = async () => {
     {
       label: "Steph",
       imageUrl:
-        "http://127.0.0.1:5500/testing-face-id/face-api-webcam-final/public/images/steph.png",
+        "http://127.0.0.1:5500/face-id-login/face-api-webcam-final/public/images/steph.png",
     },
     // add name and photo/selfie url so it can detect to
     // {
