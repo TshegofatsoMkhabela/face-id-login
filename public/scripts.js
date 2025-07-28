@@ -19,7 +19,7 @@ const run = async () => {
     {
       label: "Tshego",
       imageUrl:
-        "http://127.0.0.1:5500/face-id-login/public/images/blue-profile.jpg",
+        "https://raw.githubusercontent.com/TshegofatsoMkhabela/face-id-login/refs/heads/main/public/images/blue-profile.jpg",
     },
     {
       label: "Jordan",
@@ -28,7 +28,8 @@ const run = async () => {
     },
     {
       label: "Steph",
-      imageUrl: "http://127.0.0.1:5500/face-id-login/public/images/steph.png",
+      imageUrl:
+        "https://raw.githubusercontent.com/TshegofatsoMkhabela/face-id-login/refs/heads/main/public/images/steph.PNG",
     },
     // add name and photo/selfie url so it can detect to
     // {
